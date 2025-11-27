@@ -1,35 +1,34 @@
 import Link from "next/link";
-import About from "../about/about";
 
 
 export default function Home() {
   return (
     <div>
       <Link href="/about">
-        <img
+        <img 
+          className="inline-block"
           src="/images/frog.png"
           alt="About Me"
-          style={{ width: 1000, cursor: 'pointer' }}
+          style={{ width: 350, cursor: 'pointer' }}
+        />
+      </Link>
+      <Link href="/social">
+       <img
+          className="inline-block"
+          src="/images/KoiFish.png"
+          alt="socials"
+          style={{ width: 150, cursor: 'pointer' }}
+        />
+      </Link>
+      <Link href="/project">
+       <img
+          className="inline-block"
+          src="/images/swan.png"
+          alt="socials"
+          style={{ width: 350, cursor: 'pointer' }}
         />
       </Link>
     </div>
   );
 }
 
-
-//       {/* Or just inline */}
-//       <p>
-//         Here is a clickable image link:{' '}
-//         <Link href="./projects/projects.tsx" passHref>
-//           <a>
-//             <img
-//               src="/images/wireframeshowingpage.png"
-//               alt="Clickable Image Link"
-//               style={{ width: 50, cursor: 'pointer' }}
-//             />
-//           </a>
-//         </Link>
-//       </p>
-//     </div>
-//   );
-// }
