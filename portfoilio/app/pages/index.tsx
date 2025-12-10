@@ -4,6 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
+      <div>
       <Link href="/about">
         <img 
           className="inline-block"
@@ -12,6 +13,7 @@ export default function Home() {
           style={{ width: 350, cursor: 'pointer' }}
         />
       </Link>
+      </div>
       <Link href="/social">
        <img
           className="inline-block"
