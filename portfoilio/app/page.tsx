@@ -6,7 +6,7 @@ import Index from "./pages/index";
 export default function HomePage(): JSX.Element {
   return (
     <main className="relative w-full min-h-screen flex items-center justify-center">
-      {/* Background Artwork */}
+     
       <Image
         src="/images/homepagestarted.png"  
         alt="Custom art background"
@@ -15,7 +15,7 @@ export default function HomePage(): JSX.Element {
         priority
       />
 
-      {/* Foreground Text */}
+      
       <Hero />
       <Index/>
     </main>

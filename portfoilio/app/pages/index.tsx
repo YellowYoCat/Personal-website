@@ -1,35 +1,38 @@
 import Link from "next/link";
+import './index.css';
 
 
 export default function Home() {
   return (
-    <div>
+    <div className="container">
       <div>
       <Link href="/about">
         <img 
-          className="inline-block"
+        className="frog"
           src="/images/frog.png"
           alt="About Me"
           style={{ width: 350, cursor: 'pointer' }}
         />
       </Link>
       </div>
+      <div className="koi">
       <Link href="/social">
        <img
-          className="inline-block"
           src="/images/KoiFish.png"
           alt="socials"
           style={{ width: 150, cursor: 'pointer' }}
         />
       </Link>
+      </div>
+      <div className="swan">
       <Link href="/project">
        <img
-          className="inline-block"
           src="/images/swan.png"
           alt="socials"
           style={{ width: 350, cursor: 'pointer' }}
         />
       </Link>
+      </div>
     </div>
   );
 }

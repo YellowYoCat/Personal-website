@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  width: 100%; 
+  max-width: 900px; 
+  margin: 0 auto;
+} 
+
+.frog {
+  display: flex;
+  top: 200px;    
+  left: 100px;
+  
+ 
+  z-index: 3;  
+}
+
+.fish {
+  /* position: absolute;
+  top: 68%;   
+  left: 50%;
+  width: 70px;
+  z-index: 2; */
+}
+
+.swan {
+  /* position: absolute;
+  top: 65%;    
+  left: 65%;
+  width: 90px; 
+  z-index: 2; */
+}
