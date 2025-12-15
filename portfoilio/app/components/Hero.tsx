@@ -12,7 +12,7 @@ export default function Hero(): JSX.Element {
       transition={{ duration: 0.5 }}
       className="text-5xl text-white font-bold drop-shadow"
     >
-      My Portfoilio
+      {/* My Portfoilio */}
     </motion.h1>
   );
 }
