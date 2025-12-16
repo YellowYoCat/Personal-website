@@ -1,27 +1,41 @@
 import Link from "next/link";
 import Image from "next/image";
+import "./about.css";
 
-
-export default function About() {
+export default function AboutPage() {
   return (
-    <main style={{ padding: '2rem' }}>
+    <main className="about-container">
       <Image
         src="/images/pond.png"
         alt="Custom art background"
         fill
-        className="object-cover opacity-90 -z-10"
+        className="about-bg"
         priority
       />
-      <h1>About Me</h1>
-      <p>This is where you can write about yourself.</p>
-      <Link href="/" className="inline-block">
-        <img
+
+      <h1 className="about-title">About Me</h1>
+
+      <div className="text-background">
+        <p className="about-text">
+          Just graduated from Neumont College!
+          I'm a front-end developer who enjoys building engaging UI's
+          and creating exceptional user experiences.
+          I'm really comfortable with modern frameworks, and animations.
+          Since I have some full-stack and back-end knowledge as well,
+          I can make a significant contribution across the board on a development team.
+        </p>
+      </div>
+
+      <Link href="/" className="duck-link">
+        <Image
           src="/images/duck.png"
-          alt="Go Home"
-          className="w-[500px] inline-block cursor-pointer"
+          alt="Duck"
+          width={220}
+          height={220}
+          className="duck"
+          priority
         />
       </Link>
-
     </main>
   );
 }

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=DynaPuff:wght@400..700&family=Fuzzy+Bubbles:wght@400;700&family=Jolly+Lodger&family=Luckiest+Guy&display=swap');
+
+.about-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+}
+
+.about-bg {
+    object-fit: cover;
+    opacity: 0.9;
+    z-index: -10;
+}
+
+.about-title {
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 96px;
+    color: #FAEC00;
+    -webkit-text-stroke: 3px #B05E27;
+    letter-spacing: 3px;
+    text-align: center;
+    opacity: 0;
+    animation:
+        fadeIn 1.5s ease-out forwards,
+        float 4s ease-in-out infinite;
+    z-index: 5;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.text-background {
+    background-color: #FFF2CC;
+    border-radius: 25px;
+    padding: 1.5rem 2.5rem;
+    border: solid 5px #DFA67B;
+    max-width: 80%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.about-text {
+    color: #7BC931;
+    -webkit-text-stroke: .5px #4d8354;
+    font-family: DynaPuff, system-ui;
+    font-size: 25px;
+    line-height: 1.6;
+    margin: 0;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.duck-link {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    z-index: 10;
+}
+
+.duck {
+    position: relative;
+    right: 550px;
+    bottom: 60px;
+    animation: duckFloat 6s ease-in-out infinite;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes duckFloat {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-12px, -6px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .about-title {
+        font-size: 80px;
+        margin-top: 40px;
+        -webkit-text-stroke: 2.5px #B05E27;
+    }
+
+    .text-background {
+        padding: 1.2rem 2rem;
+        max-width: 85%;
+    }
+
+    .about-text {
+        font-size: 22px;
+    }
+
+    .duck-link {
+        right: 100px;
+        bottom: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-title {
+        font-size: 64px;
+        margin-top: 50px;
+    }
+
+    .text-background {
+        padding: 1rem 1.8rem;
+        max-width: 85%;
+    }
+
+    .about-text {
+        font-size: 20px;
+    }
+
+    .duck-link {
+        right: 80px;
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 48px;
+        margin-top: 30px;
+        letter-spacing: 2px;
+    }
+
+    .text-background {
+        max-width: 90%;
+        padding: 1rem 1.5rem;
+        border-radius: 20px;
+        border: solid 4px #DFA67B;
+    }
+
+    .about-text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .duck-link {
+        right: 40px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 38px;
+        margin-top: 20px;
+        -webkit-text-stroke: 2px #B05E27;
+    }
+
+    .text-background {
+        padding: 0.8rem 1.2rem;
+        border-radius: 15px;
+        border: solid 3px #DFA67B;
+        max-width: 90%;
+    }
+
+    .about-text {
+        font-size: 16px;
+        line-height: 1.4;
+        -webkit-text-stroke: 0.4px #4d8354;
+    }
+
+    .duck-link {
+        right: 20px;
+        bottom: 15px;
+    }
+}
