@@ -1,10 +1,4 @@
-// app/layout.tsx
 import './globals.css'; // optional, your global styles
-
-export const metadata = {
-  title: 'Pondfoilio',
-  description: 'Your site description',
-};
 
 export default function RootLayout({
   children,
@@ -13,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning={true}>
         {children}
       </body>
     </html>
