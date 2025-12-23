@@ -1,28 +1,70 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import "./socials.css";
 
 export default function About() {
   return (
-    <main style={{ padding: '2rem' }}>
+    <main className="socials-container">
       <Image
         src="/images/social.png"
         alt="Custom art background"
         fill
-        className="object-cover opacity-90 -z-10"
+        className="background-image"
         priority
       />
-      <h1>Socials</h1>
-      <p>This is where you can show off your socials</p>
-      <Link href="/">
-        <Image
-          src="/images/duck.png"
-          alt="Go Home"
-          width={500}
-          height={500}
-          style={{ cursor: "pointer" }}
-        />
-      </Link>
+      
+      <h1 className="socials-title">Socials</h1>
+      <p className="socials-subtitle">Click a link and check me out!</p>
+      
+      <div className="social-icons-container">
+        <a 
+          href="https://github.com/YellowYoCat" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="social-link"
+        >
+          <div className="social-icon-wrapper">
+            <Image
+              src="/images/Github.png"
+              alt="GitHub"
+              width={80}
+              height={80}
+              className="social-icon"
+            />
+          </div>
+        </a>
+        
+        <a 
+          href="https://www.linkedin.com/in/johanna-johnson" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="social-link"
+        >
+          <div className="social-icon-wrapper">
+            <Image
+              src="/images/linkedin.png"
+              alt="LinkedIn"
+              width={80}
+              height={80}
+              className="social-icon"
+            />
+          </div>
+        </a>
+      </div>
+      
+      <div className="duck-container">
+        <Link href="/" className="duck-link">
+          <div className="duck-wrapper">
+            <Image
+              src="/images/duck.png"
+              alt="Go Home"
+              width={120}
+              height={120}
+              className="floating-duck"
+            />
+          </div>
+        </Link>
+      </div>
     </main>
   );
 }

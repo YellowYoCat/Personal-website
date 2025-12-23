@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Fuzzy+Bubbles:wght@400;700&family=Jolly+Lodger&family=Luckiest+Guy&display=swap');
+
+
+.socials-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-image {
+    object-fit: cover;
+    opacity: 0.9;
+    z-index: -10;
+}
+
+
+.socials-title {
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 96px;
+    color: #FAEC00;
+    -webkit-text-stroke: 3px #B05E27;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 7rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    animation: titleFloat 4s ease-in-out infinite;
+}
+
+@keyframes titleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.socials-subtitle {
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 96px;
+    color: #FAEC00;
+    -webkit-text-stroke: 3px #B05E27;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: subtitleFade 3s ease-in-out infinite;
+}
+
+@keyframes subtitleFade {
+
+    0%,
+    100% {
+        opacity: 0.95;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+
+.social-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: block;
+    text-decoration: none;
+}
+
+
+.social-icon-wrapper {
+    display: inline-block;
+    transition: all 0.3s ease;
+    animation: iconFloat 6s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.5s);
+
+}
+
+.social-link:nth-child(1) .social-icon-wrapper {
+    --i: 0;
+}
+
+.social-link:nth-child(2) .social-icon-wrapper {
+    --i: 1;
+}
+
+@keyframes iconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-15px) rotate(-5deg);
+    }
+}
+
+
+.social-icon {
+    width: 300px;
+    transition: all 0.3s ease;
+    filter: brightness(1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.social-link:hover .social-icon-wrapper {
+    animation: iconHover 1.5s ease-in-out infinite;
+    transform: scale(1.15);
+}
+
+@keyframes iconHover {
+
+    0%,
+    100% {
+        transform: scale(1.15) translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1.15) translateY(-8px) rotate(3deg);
+    }
+
+    50% {
+        transform: scale(1.15) translateY(-15px) rotate(0deg);
+    }
+
+    75% {
+        transform: scale(1.15) translateY(-8px) rotate(-3deg);
+    }
+}
+
+.social-link:hover .social-icon {
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.4),
+        0 0 0 4px rgba(255, 255, 255, 0.2),
+        inset 0 0 30px rgba(255, 255, 255, 0.2);
+    filter: brightness(1.2) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+}
+
+
+.duck-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+}
+
+.duck-link {
+    display: block;
+    text-decoration: none;
+}
+
+.duck-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.floating-duck {
+    animation:
+        duckFloat 5s ease-in-out infinite,
+        duckBob 2s ease-in-out infinite,
+        duckWiggle 3s ease-in-out infinite;
+    filter:
+        drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+
+@keyframes duckFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-10px, -25px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translate(0, -40px) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(10px, -25px) rotate(2deg);
+    }
+}
+
+
+@keyframes duckBob {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-8px);
+    }
+
+    75% {
+        transform: translateY(-4px);
+    }
+}
+
+
+@keyframes duckWiggle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(1deg);
+    }
+
+    66% {
+        transform: rotate(-1deg);
+    }
+}
+
+.duck-link:hover .floating-duck {
+    animation:
+        duckFloat 2s ease-in-out infinite,
+        duckBob 1s ease-in-out infinite,
+        duckWiggle 1.5s ease-in-out infinite;
+    transform: scale(1.1);
+    filter:
+        drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+}
+
+
+.duck-link:hover .duck-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140%;
+    height: 140%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%);
+    animation: ripple 1.5s ease-out infinite;
+    z-index: -1;
+}
+
+@keyframes ripple {
+    0% {
+        width: 140%;
+        height: 140%;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .socials-title {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .socials-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .social-icons-container {
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 4rem;
+    }
+
+    .social-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .floating-duck {
+        width: 100px;
+        height: 100px;
+    }
+
+    .duck-container {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .socials-title {
+        font-size: 2rem;
+    }
+
+    .social-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .floating-duck {
+        width: 80px;
+        height: 80px;
+    }
+
+    .duck-container {
+        bottom: 15px;
+        right: 15px;
+    }
+}
