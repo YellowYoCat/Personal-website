@@ -1,0 +1,2 @@
+- [x] Swap image-column and text-column in page.tsx to place text on the left side
+- [x] Update .project-description CSS in project.css to remove max-width and set width: 100%

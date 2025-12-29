@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Fuzzy+Bubbles:wght@400;700&family=Jolly+Lodger&family=Luckiest+Guy&display=swap');
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --white: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.custom-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: -10;
+}
+
+
+.title {
+  font-family: "Cherry Bomb One", system-ui;
+  color: #FAEC00;
+  -webkit-text-stroke: 3px #B05E27;
+  font-size: 7rem;
+
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  animation: titleFloat 4s ease-in-out infinite;
+}
+
+
+
+.duck-container {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  z-index: 30;
+}
+
+.duck-image {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.duck-image:hover {
+  transform: scale(1.05);
+}
+
+
+.scroll-container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.scroll-content {
+  height: 300vh;
+  position: relative;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1152px;
+  padding-left: px;
+}
+
+.image-column {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  width: 384px;
+  height: 384px;
+}
+
+.image-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+
+.text-column {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.text-content-container {
+  position: relative;
+
+  text-align: center;
+  display: flex;
+
+}
+
+
+.project-container {
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.project-title {
+  font-family: "Cherry Bomb One", system-ui;
+  font-size: 70px;
+  color: #FAEC00;
+  -webkit-text-stroke: 3px #B05E27;
+}
+
+
+.project-description {
+  color: #D0A026;
+  -webkit-text-stroke: .1px #FAEC00;
+  font-family: DynaPuff, system-ui;
+  line-height: 1.8;
+}
+
+
+
+.project-description-full {
+
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+  line-height: 1.75;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .image-column,
+  .text-column {
+    width: 100%;
+  }
+
+  .project-description,
+  .project-description-full,
+  .project-description-max,
+  .project-description-left {
+    max-width: 90%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .project-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .project-title {
+    font-size: 28px;
+  }
+
+  .project-description {
+    font-size: 16px;
+  }
+
+  .duck-image {
+    width: 150px;
+  }
+}
