@@ -1,10 +1,12 @@
 "use client";
 
+// TODO: make the pictures clickable to send the user to the github page. 
+// also add figma link into the readmes for the github projects 
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import "./project.css"; // Import the CSS file
+import "./project.css"; 
 
 export default function Home() {
   const containerRef = React.useRef<HTMLDivElement>(null);
@@ -49,7 +51,6 @@ export default function Home() {
         <div className="scroll-content">
           <div className="sticky-container">
             <div className="content-wrapper">
-              {/* Left side image container */}
               <div className="image-column">
                 <div className="image-container">
                   <motion.div 
@@ -57,7 +58,7 @@ export default function Home() {
                     className="image-wrapper"
                   >
                     <Image
-                      src="/images/project1-image.png"
+                      src="/images/Supernom.png"
                       alt="Nom Wrangler Project"
                       width={384}
                       height={384}
@@ -69,7 +70,7 @@ export default function Home() {
                     className="image-wrapper"
                   >
                     <Image
-                      src="/images/project2-image.png"
+                      src="/images/TuneBreaker.png"
                       alt="Mite Project"
                       width={384}
                       height={384}
@@ -81,7 +82,7 @@ export default function Home() {
                     className="image-wrapper"
                   >
                     <Image
-                      src="/images/project3-image.png"
+                      src="/images/botanicaretaker.png"
                       alt="Botani Care Taker Project"
                       width={384}
                       height={384}
@@ -101,9 +102,9 @@ export default function Home() {
                   >
                     <h2 className="project-title">Nom Wrangler</h2>
                     <p className="project-description">
-                      A food delivery app that connects local chefs with food enthusiasts. 
-                      Built with React Native and Firebase, featuring real-time order tracking 
-                      and chef profiles.
+                     I helped designed a community-driven food finder that highlights local mom-and-pop restaurants, hidden gems, and food trucks. 
+                     Built with React and AWS, the platform focuses on a clean, user-friendly interface that allows users to submit, 
+                     discover, and review places not easily found on traditional maps.
                     </p>
                   </motion.div>
                   
@@ -112,10 +113,12 @@ export default function Home() {
                     style={{ opacity: text2Opacity }} 
                     className="project-container"
                   >
-                    <h2 className="project-title">Mite</h2>
+                    <h2 className="project-title">TuneBreaker</h2>
                     <p className="project-description">
-                      A minimalist task management tool for developers. Features include 
-                      markdown support, GitHub integration, and a clean, distraction-free interface.
+                      I designed an intuitive music-learning tool that simplifies notes, chords, and keys. 
+                      Guided by user research and iterative wireframing, 
+                      the final experience emphasizes clarity, accessibility, 
+                      and ease of learning for all skill levels.
                     </p>
                   </motion.div>
                   
@@ -126,8 +129,8 @@ export default function Home() {
                   >
                     <h2 className="project-title">Botani Care Taker</h2>
                     <p className="project-description">
-                      An IoT plant monitoring system that tracks soil moisture, light levels, 
-                      and temperature. Sends automated watering reminders and health alerts.
+                      I designed a plant care experience that helps users maintain healthy plants while they’re away. 
+                      The interface emphasizes clarity, reassurance, and timely guidance, making plant care feel simple and stress-free.
                     </p>
                   </motion.div>
                 </div>

@@ -1,8 +1,23 @@
+"use client";
+
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import "./socials.css";
 
 export default function About() {
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const duckContainer = document.querySelector('.duck-container');
+      if (duckContainer) {
+        duckContainer.classList.remove('loading');
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <main className="socials-container">
       <Image
@@ -12,14 +27,14 @@ export default function About() {
         className="background-image"
         priority
       />
-      
+
       <h1 className="socials-title">Socials</h1>
       <p className="socials-subtitle">Click a link and check me out!</p>
-      
+
       <div className="social-icons-container">
-        <a 
-          href="https://github.com/YellowYoCat" 
-          target="_blank" 
+        <a
+          href="https://github.com/YellowYoCat"
+          target="_blank"
           rel="noopener noreferrer"
           className="social-link"
         >
@@ -33,10 +48,10 @@ export default function About() {
             />
           </div>
         </a>
-        
-        <a 
-          href="https://www.linkedin.com/in/johanna-johnson" 
-          target="_blank" 
+
+        <a
+          href="https://www.linkedin.com/in/johanna-johnson"
+          target="_blank"
           rel="noopener noreferrer"
           className="social-link"
         >
@@ -51,7 +66,7 @@ export default function About() {
           </div>
         </a>
       </div>
-      
+
       <div className="duck-container">
         <Link href="/" className="duck-link">
           <div className="duck-wrapper">
