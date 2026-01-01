@@ -57,7 +57,7 @@ export default function About() {
         >
           <div className="social-icon-wrapper">
             <Image
-              src="/images/linkedin.png"
+              src="/images/Linkedin.png"
               alt="LinkedIn"
               width={80}
               height={80}
