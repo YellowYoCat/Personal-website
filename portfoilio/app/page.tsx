@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { JSX } from "react";
 import Hero from "./components/Hero";
-import Index from "./pages/index";
+import Index from "./pages/page";
 
 export default function HomePage(): JSX.Element {
   return (
