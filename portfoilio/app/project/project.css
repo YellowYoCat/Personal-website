@@ -104,7 +104,6 @@ body {
 .image-column {
   width: 50%;
   display: flex;
-  justify-content: center;
 }
 
 .image-container {
@@ -188,8 +187,9 @@ body {
 }
 @media (max-width: 1024px) {
   .content-wrapper {
-    flex-direction: column;
-    gap: 40px;
+    position: absolute;
+    flex-direction: row;
+    
   }
 
   .image-column,
@@ -212,6 +212,100 @@ body {
 
   .project-title {
     font-size: 36px;
+  }
+}
+
+ @media (max-width: 768px) {
+  .image-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .project-title {
+    font-size: 28px;
+  }
+
+  .project-description {
+    font-size: 16px;
+  }
+
+  .duck-image {
+    width: 150px;
+  }
+} 
+
+
+
+@media (max-width: 1280px) {
+  .content-wrapper {
+    max-width: 90%;
+  }
+
+  .image-container {
+    width: 320px;
+    height: 320px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .project-title {
+    font-size: 48px;
+  }
+
+  .project-description {
+    font-size: 18px;
+  }
+
+  .duck-image {
+    width: 180px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 90%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .image-column,
+  .text-column {
+    width: 100%;
+  }
+
+  .image-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .project-title {
+    font-size: 38px;
+  }
+
+  .project-description {
+    font-size: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .duck-image {
+    width: 160px;
   }
 }
 
@@ -239,5 +333,39 @@ body {
 
   .duck-image {
     width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+
+  .project-description {
+    font-size: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .duck-image {
+    width: 120px;
+  }
+
+  .content-wrapper {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
