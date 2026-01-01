@@ -33,7 +33,7 @@ export default function Home() {
         priority
       />
 
-        <h1 className="title">Favorite Projects</h1>
+        <h1 className="title">Projects</h1>
 
 
       <div className="duck-container">
@@ -102,7 +102,7 @@ export default function Home() {
                   >
                     <h2 className="project-title">Nom Wrangler</h2>
                     <p className="project-description">
-                     I helped designed a community-driven food finder that highlights local mom-and-pop restaurants, hidden gems, and food trucks. 
+                     I helped designed and coded a community-driven food finder that highlights local mom-and-pop restaurants, hidden gems, and food trucks. 
                      Built with React and AWS, the platform focuses on a clean, user-friendly interface that allows users to submit, 
                      discover, and review places not easily found on traditional maps.
                     </p>
@@ -115,7 +115,7 @@ export default function Home() {
                   >
                     <h2 className="project-title">TuneBreaker</h2>
                     <p className="project-description">
-                      I designed an intuitive music-learning tool that simplifies notes, chords, and keys. 
+                      I helped designed an intuitive music-learning tool that simplifies notes, chords, and keys. 
                       Guided by user research and iterative wireframing, 
                       the final experience emphasizes clarity, accessibility, 
                       and ease of learning for all skill levels.
@@ -127,9 +127,9 @@ export default function Home() {
                     style={{ opacity: text3Opacity }} 
                     className="project-container"
                   >
-                    <h2 className="project-title">Botani Care Taker</h2>
+                    <h2 className="project-title">Botani CareTaker</h2>
                     <p className="project-description">
-                      I designed a plant care experience that helps users maintain healthy plants while they’re away. 
+                      I designed and coded a plant care experience that helps users maintain healthy plants while they’re away. 
                       The interface emphasizes clarity, reassurance, and timely guidance, making plant care feel simple and stress-free.
                     </p>
                   </motion.div>
