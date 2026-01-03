@@ -69,14 +69,16 @@ export default function About() {
 
       <div className="duck-container">
         <Link href="/" className="duck-link">
-          <div className="duck-wrapper">
-            <Image
-              src="/images/duck.png"
-              alt="Go Home"
-              width={120}
-              height={120}
-              className="floating-duck"
-            />
+          <div className="cursor-hover home-cursor">
+            <div className="duck-wrapper">
+              <Image
+                src="/images/duck.png"
+                alt="Go Home"
+                width={120}
+                height={120}
+                className="floating-duck"
+              />
+            </div>
           </div>
         </Link>
       </div>

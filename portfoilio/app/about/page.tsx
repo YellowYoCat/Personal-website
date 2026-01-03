@@ -27,14 +27,16 @@ export default function AboutPage() {
       </div>
 
       <Link href="/" className="duck-link">
-        <Image
-          src="/images/duck.png"
-          alt="Duck"
-          width={220}
-          height={220}
-          className="duck"
-          priority
-        />
+        <div className="cursor-hover home-cursor">
+          <Image
+            src="/images/duck.png"
+            alt="Duck"
+            width={220}
+            height={220}
+            className="duck"
+            priority
+          />
+        </div>
       </Link>
     </main>
   );

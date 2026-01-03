@@ -15,7 +15,6 @@
   position: absolute;
   top: 10px;
   left: 780px;
-
   transform: translateX(-50%);
   -webkit-text-stroke: 4px #B05E27;
   font-size: 160px;
@@ -28,11 +27,56 @@
   z-index: 10;
 }
 
-
 .title.from-duck {
   left: 280px;
 }
 
+
+.cursor-hover {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.about-cursor:hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='30'><rect width='100%' height='100%' fill='%23FAEC00' rx='15' ry='15'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' font-family='Fuzzy Bubbles, sans-serif' font-size='14' fill='%23B05E27' font-weight='bold'>ABOUT</text></svg>") 40 15, auto;
+}
+
+.socials-cursor:hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='90' height='30'><rect width='100%' height='100%' fill='%23FAEC00' rx='15' ry='15'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' font-family='Fuzzy Bubbles, sans-serif' font-size='14' fill='%23B05E27' font-weight='bold'>SOCIALS</text></svg>") 45 15, auto;
+}
+
+.projects-cursor:hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='95' height='30'><rect width='100%' height='100%' fill='%23FAEC00' rx='15' ry='15'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' font-family='Fuzzy Bubbles, sans-serif' font-size='14' fill='%23B05E27' font-weight='bold'>PROJECTS</text></svg>") 47 15, auto;
+}
+
+
+.cursor-hover:hover::after {
+  content: attr(data-cursor);
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #FAEC00;
+  color: #B05E27;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-family: 'Fuzzy Bubbles', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1000;
+  animation: fadeInCursor 0.2s ease-out;
+}
+
+@keyframes fadeInCursor {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes fadeIn {
   from {
@@ -59,7 +103,6 @@
     transform: translate(-50%, 0);
   }
 }
-
 
 .frog {
   position: absolute;
@@ -157,9 +200,6 @@
   }
 }
 
-
-
-
 @media (max-width: 1024px) {
 
   .title {
@@ -170,7 +210,6 @@
   .title.from-duck {
     left: 200px;
   }
-
 
   .frog {
     width: 35%;
@@ -221,6 +260,11 @@
     width: 40%;
     right: 20px;
     bottom: 40px;
+  }
+  
+  /* Simpler cursor for mobile */
+  .cursor-hover:hover {
+    cursor: pointer;
   }
 }
 

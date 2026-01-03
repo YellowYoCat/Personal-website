@@ -22,18 +22,22 @@ export default function Home() {
       <h1 className={`title ${fromDuck ? "from-duck" : ""}`}>PONDFOLIO</h1>
 
       <Link href="/about">
-        <img className="frog" src="/images/frog.png" alt="About Me" />
+        <div className="cursor-hover about-cursor">
+          <img className="frog" src="/images/frog.png" alt="About Me" />
+        </div>
       </Link>
 
       <Link href="/social">
-        <img className="koi" src="/images/KoiFish.png" alt="Socials" />
+        <div className="cursor-hover socials-cursor">
+          <img className="koi" src="/images/KoiFish.png" alt="Socials" />
+        </div>
       </Link>
 
       <Link href="/project">
-        <img className="swan" src="/images/swan.png" alt="Projects" />
+        <div className="cursor-hover projects-cursor">
+          <img className="swan" src="/images/swan.png" alt="Projects" />
+        </div>
       </Link>
     </div>
   );
 }
-
-

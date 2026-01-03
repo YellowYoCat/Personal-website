@@ -1,7 +1,5 @@
 "use client";
 
-// TODO: make the pictures clickable to send the user to the github page. 
-// also add figma link into the readmes for the github projects 
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -37,12 +35,14 @@ export default function Home() {
 
 
       <div className="duck-container">
-        <Link href="/" className="inline-block">
-          <img
-            src="/images/duck.png"
-            alt="Go Home"
-            className="duck-image"
-          />
+        <Link href="/" className="inline-block" >
+          <div className="cursor-hover home-cursor">
+            <img
+              src="/images/duck.png"
+              alt="Go Home"
+              className="duck-image"
+            />
+          </div>
         </Link>
       </div>
 
@@ -129,7 +129,7 @@ export default function Home() {
                   >
                     <h2 className="project-title">Botani CareTaker</h2>
                     <p className="project-description">
-                      I designed and coded a plant care experience that helps users maintain healthy plants while they’re away. 
+                      I designed and coded a plant care experience that helps users maintain healthy plants while they're away. 
                       The interface emphasizes clarity, reassurance, and timely guidance, making plant care feel simple and stress-free.
                     </p>
                   </motion.div>
