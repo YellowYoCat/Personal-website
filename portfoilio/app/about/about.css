@@ -88,7 +88,6 @@
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='70' height='30'><rect width='100%' height='100%' fill='%23FAEC00' rx='15' ry='15'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' font-family='Fuzzy Bubbles, sans-serif' font-size='14' fill='%23B05E27' font-weight='bold'>HOME</text></svg>") 35 15, auto;
 }
 
-/* Alternative fallback cursor style using pseudo-elements */
 .cursor-hover:hover::after {
     content: attr(data-cursor);
     position: fixed;
@@ -180,7 +179,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
     .about-title {
         font-size: 64px;
         margin-top: 50px;
@@ -221,7 +220,6 @@
     }
 
     .duck-link {
-        left: 500px;
         bottom: 20px;
     }
     
@@ -230,28 +228,3 @@
     }
 }
 
-@media (max-width: 480px) {
-    .about-title {
-        font-size: 38px;
-        margin-top: 20px;
-        -webkit-text-stroke: 2px #B05E27;
-    }
-
-    .text-background {
-        padding: 0.8rem 1.2rem;
-        border-radius: 15px;
-        border: solid 3px #DFA67B;
-        max-width: 90%;
-    }
-
-    .about-text {
-        font-size: 16px;
-        line-height: 1.4;
-        -webkit-text-stroke: 0.4px #4d8354;
-    }
-
-    .duck {
-        right: 20px;
-        bottom: 15px;
-    }
-}
