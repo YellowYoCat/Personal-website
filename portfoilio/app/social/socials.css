@@ -207,6 +207,7 @@
         opacity: 0;
         transform: translateY(-5px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -357,20 +358,20 @@
     }
 
     .social-icon {
-        width: 70px;
-        height: 70px;
+        width: 200px;
+        height: 140px;
     }
 
     .floating-duck {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 130px;
     }
 
     .duck-container {
         bottom: 20px;
         right: 20px;
     }
-    
+
 
     .cursor-hover:hover {
         cursor: pointer;
