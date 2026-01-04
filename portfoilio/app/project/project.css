@@ -26,7 +26,7 @@ body {
 }
 
 .custom-container {
-  position: relative;
+  position: absolute;
   height: 100vh;
   width: 100%;
 }
@@ -104,6 +104,7 @@ body {
     opacity: 0;
     transform: translateY(-5px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -144,7 +145,7 @@ body {
 }
 
 .image-container {
-  position: relative;
+  position: absolute;
   width: 384px;
   height: 384px;
 }
@@ -161,9 +162,16 @@ body {
 }
 
 .project-image {
+  /* object-fit: contain;
+  width: 100%;
+  height: 100%; */
+  position: absolute;
   object-fit: contain;
   width: 100%;
   height: 100%;
+  bottom: 200px;
+  left: 100px;
+
 }
 
 
@@ -175,10 +183,9 @@ body {
 
 
 .text-content-container {
-  position: relative;
-
+  position: absolute;
   text-align: center;
-  display: flex;
+  display: inline-block;
 
 }
 
@@ -222,11 +229,12 @@ body {
   line-height: 1.75;
   text-align: center;
 }
+
 @media (max-width: 1024px) {
   .content-wrapper {
     position: absolute;
     flex-direction: row;
-    
+
   }
 
   .image-column,
@@ -234,13 +242,10 @@ body {
     width: 100%;
   }
 
-  .project-description,
-  .project-description-full,
-  .project-description-max,
-  .project-description-left {
-    max-width: 90%;
-    padding-left: 16px;
-    padding-right: 16px;
+  .project-descriptionv{
+    
+    width: 300px;
+    top: 100px;
   }
 
   .title {
@@ -252,7 +257,7 @@ body {
   }
 }
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
   .image-container {
     width: 280px;
     height: 280px;
@@ -277,16 +282,16 @@ body {
   .duck-image {
     width: 150px;
   }
-  
- 
+
+
   .cursor-hover:hover {
     cursor: pointer;
   }
-} 
+}
 
 
 
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
   .content-wrapper {
     max-width: 90%;
   }
@@ -311,9 +316,9 @@ body {
   .duck-image {
     width: 180px;
   }
-}
+} */
 
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1025px) and (min-width: 769px) {
   .content-wrapper {
     flex-direction: column;
     gap: 30px;
@@ -344,41 +349,133 @@ body {
     font-size: 16px;
     padding-left: 24px;
     padding-right: 24px;
+    width: 300px;
+    top: 100px;
   }
+
+  .project-image {
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    bottom: 150px;
+    left: 10px;
+}
 
   .duck-image {
     width: 160px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1275px) and (min-width: 1025px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 90%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .image-column,
+  .text-column {
+    width: 100%;
+  }
+
   .image-container {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
   }
 
   .title {
-    font-size: 24px;
-  }
-
-  .subtitle {
-    font-size: 16px;
+    font-size: 32px;
   }
 
   .project-title {
-    font-size: 28px;
+    position: absolute;
+    font-size: 38px;
+    bottom: 200px;
+    left: 150px;
   }
 
   .project-description {
     font-size: 16px;
+    position: absolute;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 300px;
+    left: 100px;
+    
+    
   }
 
+  .project-image {
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    bottom: 150px;
+    left: 10px;
+}
+
   .duck-image {
-    width: 150px;
+    width: 160px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) and (min-width: 592px) {
+   .content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 90%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .image-column,
+  .text-column {
+    width: 100%;
+  }
+
+  .image-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .title {
+    font-size: 98px;
+  }
+
+  .project-title {
+    position: absolute;
+    bottom: 180px;
+    font-size: 35px;
+    left: 55px;
+  }
+
+  .project-description {
+    font-size: 16px;
+    position: absolute;
+    /* padding-left: 24px;
+    padding-right: 24px; */
+    width: 300px;
+    left: .1px;
+  }
+
+  .project-image {
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    bottom: 150px;
+    left: 10px;
+}
+
+  .duck-image {
+    width: 160px;
+  }
+}
+
+@media (max-width:  592px) {
   .image-container {
     width: 200px;
     height: 200px;
@@ -393,13 +490,27 @@ body {
   }
 
   .project-title {
-    font-size: 22px;
+    position: absolute;
+    font-size: 35px;
+    position: absolute;
+    bottom: 180px;
   }
 
   .project-description {
+    width: 200px;
     font-size: 14px;
     padding-left: 8px;
     padding-right: 8px;
+    position: absolute;
+  }
+
+  .project-image{
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    bottom: 150px;
+    left: 10px;
   }
 
   .duck-image {
