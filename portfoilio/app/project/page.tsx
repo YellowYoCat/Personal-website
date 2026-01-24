@@ -34,13 +34,17 @@ export default function Home() {
         <h1 className="title">Projects</h1>
 
 
-      <div className="duck-container">
-        <Link href="/" className="inline-block" >
+       <div className="duck-container">
+        <p className="duck-instruction">Click on me to go back home!</p>
+        <Link href="/" className="duck-link">
           <div className="cursor-hover home-cursor">
-            <img
+            <Image
               src="/images/duck.png"
-              alt="Go Home"
-              className="duck-image"
+              alt="Duck"
+              width={220}
+              height={220}
+              className="duck"
+              priority
             />
           </div>
         </Link>

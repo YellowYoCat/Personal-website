@@ -56,10 +56,34 @@ body {
 
 
 .duck-container {
-  position: absolute;
-  bottom: 32px;
-  right: 32px;
-  z-index: 30;
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.duck-instruction {
+    font-family: 'Fuzzy Bubbles', sans-serif;
+    color: #FAEC00;
+    -webkit-text-stroke: 1px #B05E27;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.duck-link {
+    display: inline-block;
+}
+
+.duck {
+    animation: duckFloat 6s ease-in-out infinite;
+    z-index: 10;
 }
 
 .duck-image {
@@ -284,6 +308,8 @@ body {
   .cursor-hover:hover {
     cursor: pointer;
   }
+
+  
 }
 
 @media (max-width: 1025px) and (min-width: 769px) {

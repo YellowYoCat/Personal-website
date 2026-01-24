@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=DynaPuff:wght@400..700&family=Fuzzy+Bubbles:wght@400;700&family=Jolly+Lodger&family=Luckiest+Guy&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=DynaPuff:wght@400..700&family=Fuzzy+Bubbles:wght@400;700&family=Jolly+Lodger&family=Luckiest+Guy&display=swap');
 
 .about-container {
     position: relative;
@@ -261,4 +261,308 @@
         cursor: pointer;
     }
 }
+ */
 
+
+ @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=DynaPuff:wght@400..700&family=Fuzzy+Bubbles:wght@400;700&family=Jolly+Lodger&family=Luckiest+Guy&display=swap');
+
+.about-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+}
+
+.about-bg {
+    object-fit: cover;
+    opacity: 0.9;
+    z-index: -10;
+}
+
+.about-title {
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 96px;
+    color: #FAEC00;
+    -webkit-text-stroke: 3px #B05E27;
+    letter-spacing: 3px;
+    text-align: center;
+    opacity: 0;
+    animation:
+        fadeIn 1.5s ease-out forwards,
+        float 4s ease-in-out infinite;
+    z-index: 5;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    right: 20px;
+}
+
+.text-background {
+    background-color: #FFF2CC;
+    border-radius: 25px;
+    padding: 1.5rem 2.5rem;
+    border: solid 5px #DFA67B;
+    max-width: 80%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 12rem;
+    z-index: 5;
+}
+
+.about-text {
+    color: #7BC931;
+    -webkit-text-stroke: .5px #4d8354;
+    font-family: 'DynaPuff', system-ui;
+    font-size: 25px;
+    line-height: 1.6;
+    margin: 0;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.duck-container {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.duck-instruction {
+    font-family: 'Fuzzy Bubbles', sans-serif;
+    color: #FAEC00;
+    -webkit-text-stroke: 1px #B05E27;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.duck-link {
+    display: inline-block;
+}
+
+.duck {
+    animation: duckFloat 6s ease-in-out infinite;
+    z-index: 10;
+}
+
+.cursor-hover {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.home-cursor:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='70' height='30'><rect width='100%' height='100%' fill='%23FAEC00' rx='15' ry='15'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' font-family='Fuzzy Bubbles, sans-serif' font-size='14' fill='%23B05E27' font-weight='bold'>HOME</text></svg>") 35 15, auto;
+}
+
+.cursor-hover:hover::after {
+    content: attr(data-cursor);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #FAEC00;
+    color: #B05E27;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-family: 'Fuzzy Bubbles', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 1000;
+    animation: fadeInCursor 0.2s ease-out;
+}
+
+@keyframes fadeInCursor {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes duckFloat {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-12px, -6px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 1024px) {
+    .about-title {
+        font-size: 80px;
+        margin-top: 40px;
+        -webkit-text-stroke: 2.5px #B05E27;
+    }
+
+    .text-background {
+        padding: 1.2rem 2rem;
+        max-width: 85%;
+    }
+
+    .about-text {
+        font-size: 22px;
+    }
+
+    .duck-container {
+        right: 100px;
+        bottom: 40px;
+    }
+    
+    .duck-instruction {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 500px) {
+    .about-title {
+        font-size: 64px;
+        margin-top: 50px;
+    }
+
+    .text-background {
+        padding: 1rem 1.8rem;
+        max-width: 85%;
+    }
+
+    .about-text {
+        font-size: 20px;
+    }
+
+    .duck-container {
+        right: 80px;
+        bottom: 30px;
+    }
+    
+    .duck-instruction {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 48px;
+        margin-top: 30px;
+        letter-spacing: 2px;
+    }
+
+    .text-background {
+        max-width: 90%;
+        padding: 1rem 1.5rem;
+        border-radius: 20px;
+        border: solid 4px #DFA67B;
+    }
+
+    .about-text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .duck-container {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .duck-instruction {
+        font-size: 14px;
+    }
+
+    .duck {
+        width: 180px !important;
+        height: 180px !important;
+    }
+
+    .cursor-hover:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 488px) {
+    .about-title {
+        font-size: 48px;
+        margin-top: 30px;
+        letter-spacing: 2px;
+    }
+
+    .text-background {
+        max-width: 90%;
+        padding: 1rem 1.5rem;
+        border-radius: 20px;
+        border: solid 4px #DFA67B;
+    }
+
+    .about-text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .duck-container {
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
+    .duck-instruction {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .duck {
+        width: 160px !important;
+        height: 160px !important;
+    }
+
+    .cursor-hover:hover {
+        cursor: pointer;
+    }
+}

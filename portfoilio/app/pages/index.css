@@ -34,7 +34,6 @@
   line-height: 1;
 }
 
-
 .title.from-duck {
   /* Adjust if needed for the duck animation */
 }
@@ -55,7 +54,170 @@
   animation: fadeIn 1.5s ease-out 0.3s forwards;
 }
 
-/* Rest of your existing CSS remains the same */
+/* Subtitle Media Queries */
+@media (max-width: 1200px) {
+  .subtitle {
+    font-size: 22px;
+    top: 155px;
+    left: 650px;
+  }
+}
+
+@media (max-width: 1278px) {
+  .subtitle {
+    font-size: 20px;
+    top: 145px;
+    left: 580px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .subtitle {
+    font-size: 18px;
+    top: 140px;
+    left: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 16px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    margin-top: 5px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 14px;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    margin-top: 3px;
+    padding: 0 15px;
+    line-height: 1.3;
+  }
+}
+
+/* Mobile Phone Specific Media Queries (320px - 480px) */
+@media (max-width: 480px) {
+  .container {
+    height: 100vh;
+    min-height: 600px;
+  }
+
+  .header-section {
+    top: 15px;
+    padding: 0 10px;
+  }
+
+  .title {
+    font-size: 48px;
+    -webkit-text-stroke: 1.5px #B05E27;
+    letter-spacing: 1px;
+    animation:
+      fadeIn 1.5s ease-out forwards,
+      float 4s ease-in-out infinite;
+  }
+
+  .title.from-duck {
+    /* Mobile adjustments for duck animation */
+  }
+
+  .cursor-hover {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  /* Disable custom cursor hover effects on mobile for better performance */
+  .about-cursor:hover,
+  .socials-cursor:hover,
+  .projects-cursor:hover {
+    cursor: pointer;
+  }
+
+  .cursor-hover:hover::after {
+    display: none;
+    /* Hide the custom cursor text on mobile */
+  }
+}
+
+/* Small Phones (320px - 375px) */
+@media (max-width: 375px) {
+  .title {
+    font-size: 42px;
+    -webkit-text-stroke: 1.2px #B05E27;
+    letter-spacing: 0.5px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    top: 85px;
+    width: 90%;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+}
+
+/* Extra Small Phones (320px and below) */
+@media (max-width: 320px) {
+  .title {
+    font-size: 38px;
+    -webkit-text-stroke: 1px #B05E27;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    top: 80px;
+    width: 95%;
+  }
+}
+
+/* Portrait Orientation Optimization */
+@media (max-width: 480px) and (orientation: portrait) {
+  .container {
+    background-position: center center;
+    background-attachment: fixed;
+  }
+
+  .header-section {
+    top: 5vh;
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+  .subtitle {
+    top: 12vh;
+  }
+}
+
+/* Landscape Orientation for Phones */
+@media (max-height: 480px) and (orientation: landscape) {
+  .header-section {
+    top: 5px;
+  }
+
+  .title {
+    font-size: 40px;
+    -webkit-text-stroke: 1px #B05E27;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+  }
+}
 
 .cursor-hover {
   display: inline-block;
@@ -96,6 +258,7 @@
     opacity: 0;
     transform: translateY(-5px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -107,6 +270,7 @@
     opacity: 0;
     transform: translate(-50%, -10px);
   }
+
   to {
     opacity: 1;
     transform: translate(-50%, 0);
@@ -117,9 +281,11 @@
   0% {
     transform: translate(-50%, 0);
   }
+
   50% {
     transform: translate(-50%, -6px);
   }
+
   100% {
     transform: translate(-50%, 0);
   }
@@ -149,15 +315,70 @@
   right: 300px;
 }
 
-/* Responsive design updates */
+/* Animal adjustments for mobile */
+@media (max-width: 480px) {
+  .frog {
+    width: 50%;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 250px;
+  }
+
+  .koi {
+    width: 15%;
+    bottom: 10px;
+    left: 10px;
+    max-width: 80px;
+  }
+
+  .swan {
+    width: 45%;
+    bottom: 30px;
+    right: 5px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 375px) {
+  .frog {
+    width: 55%;
+    top: 180px;
+  }
+
+  .koi {
+    width: 18%;
+    left: 5px;
+  }
+
+  .swan {
+    width: 50%;
+    right: 2px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .frog {
+    width: 60%;
+    top: 160px;
+  }
+
+  .koi {
+    width: 20%;
+  }
+
+  .swan {
+    width: 55%;
+    bottom: 15px;
+  }
+}
+
+/* Responsive design updates for other elements */
 @media (max-width: 1200px) {
   .title {
     font-size: 135px;
     -webkit-text-stroke: 3.5px #B05E27;
-  }
-  
-  .subtitle {
-    font-size: 22px;
   }
 
   .frog {
@@ -177,14 +398,18 @@
   }
 }
 
+@media (max-width: 1292px) {
+  .subtitle {
+    font-size: 20px;
+    top: 160px;
+    left: 650px;
+  }
+}
+
 @media (max-width: 1278px) {
   .title {
     font-size: 120px;
     -webkit-text-stroke: 3px #B05E27;
-  }
-  
-  .subtitle {
-    font-size: 20px;
   }
 
   .frog {
@@ -202,15 +427,17 @@
     width: 30%;
     right: 100px;
   }
+
+  .subtitle {
+    font-size: 20px;
+    top: 145px;
+    left: 480px;
+  }
 }
 
 @media (max-width: 1024px) {
   .title {
     font-size: 110px;
-  }
-  
-  .subtitle {
-    font-size: 18px;
   }
 
   .frog {
@@ -228,22 +455,22 @@
     width: 30%;
     right: 100px;
   }
+
+  .subtitle {
+    font-size: 18px;
+    top: 140px;
+    left: 350px;
+  }
 }
 
 @media (max-width: 768px) {
   .header-section {
     top: 20px;
   }
-  
+
   .title {
     font-size: 70px;
     -webkit-text-stroke: 2px #B05E27;
-  }
-  
-  .subtitle {
-    font-size: 16px;
-    margin-top: 5px;
-    padding: 0 20px;
   }
 
   .frog {
@@ -264,38 +491,21 @@
     right: 20px;
     bottom: 40px;
   }
-  
+
   .cursor-hover:hover {
     cursor: pointer;
   }
 }
 
-@media (max-width: 480px) {
-  .header-section {
-    top: 15px;
-  }
-  
-  .title {
-    font-size: 52px;
-    letter-spacing: 1px;
-  }
-  
-  .subtitle {
-    font-size: 14px;
-    margin-top: 3px;
-    padding: 0 15px;
+/* Touch device optimization */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-hover:hover::after {
+    display: none;
   }
 
-  .frog {
-    width: 55%;
-    top: 360px;
-  }
-
-  .koi {
-    width: 18%;
-  }
-
-  .swan {
-    width: 50%;
+  .about-cursor:hover,
+  .socials-cursor:hover,
+  .projects-cursor:hover {
+    cursor: pointer;
   }
 }
