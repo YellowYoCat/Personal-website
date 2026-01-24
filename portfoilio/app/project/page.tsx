@@ -106,9 +106,7 @@ export default function Home() {
                   >
                     <h2 className="project-title">Nom Wrangler</h2>
                     <p className="project-description">
-                     I helped designed and coded a community-driven food finder that highlights local mom-and-pop restaurants, hidden gems, and food trucks. 
-                     Built with React and AWS, the platform focuses on a clean, user-friendly interface that allows users to submit, 
-                     discover, and review places not easily found on traditional maps.
+                    I helped design and build a community-driven food finder that highlights local mom-and-pop restaurants, hidden gems, and food trucks using React and AWS.
                     </p>
                   </motion.div>
                   
@@ -119,10 +117,7 @@ export default function Home() {
                   >
                     <h2 className="project-title">TuneBreaker</h2>
                     <p className="project-description">
-                      I helped designed an intuitive music-learning tool that simplifies notes, chords, and keys. 
-                      Guided by user research and iterative wireframing, 
-                      the final experience emphasizes clarity, accessibility, 
-                      and ease of learning for all skill levels.
+                     I designed an intuitive music-learning tool that simplifies notes, chords, and keys, emphasizing clarity and accessibility.
                     </p>
                   </motion.div>
                   
@@ -133,8 +128,7 @@ export default function Home() {
                   >
                     <h2 className="project-title">Botani CareTaker</h2>
                     <p className="project-description">
-                      I designed and coded a plant care experience that helps users maintain healthy plants while they're away. 
-                      The interface emphasizes clarity, reassurance, and timely guidance, making plant care feel simple and stress-free.
+                     I helped designed and built a plant care experience that helps users keep plants healthy while they’re away.
                     </p>
                   </motion.div>
                 </div>
