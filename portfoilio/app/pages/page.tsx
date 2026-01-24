@@ -19,8 +19,12 @@ export default function Home() {
         <SearchParamWatcher onDuck={triggerDuck} />
       </Suspense>
 
-      <h1 className={`title ${fromDuck ? "from-duck" : ""}`}>PONDFOLIO</h1>
-
+      {/* <h1 className={`title ${fromDuck ? "from-duck" : ""}`}>PONDFOLIO</h1>
+      <p>Welcome to the pond! click on an animal to get started </p> */}
+      <div className="header-section">
+        <h1 className={`title ${fromDuck ? "from-duck" : ""}`}>PONDFOLIO</h1>
+        <p className="subtitle">Welcome to the pond! click on an animal to get started </p>
+      </div>
       <Link href="/about">
         <div className="cursor-hover about-cursor">
           <img className="frog" src="/images/frog.png" alt="About Me" />

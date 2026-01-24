@@ -10,12 +10,18 @@
   overflow: hidden;
 }
 
-.title {
-  font-family: "Cherry Bomb One", system-ui;
+.header-section {
   position: absolute;
   top: 10px;
-  left: 780px;
+  left: 50%;
   transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  width: 100%;
+}
+
+.title {
+  font-family: "Cherry Bomb One", system-ui;
   -webkit-text-stroke: 4px #B05E27;
   font-size: 160px;
   color: #FAEC00;
@@ -24,13 +30,32 @@
   animation:
     fadeIn 1.5s ease-out forwards,
     float 4s ease-in-out infinite;
-  z-index: 10;
+  margin: 0;
+  line-height: 1;
 }
+
 
 .title.from-duck {
-  left: 280px;
+  /* Adjust if needed for the duck animation */
 }
 
+.subtitle {
+  font-family: 'Fuzzy Bubbles', sans-serif;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 25px;
+  color: #B05E27;
+  font-weight: bold;
+  margin-top: 10px;
+  top: 170px;
+  left: 750px;
+  position: absolute;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out 0.3s forwards;
+}
+
+/* Rest of your existing CSS remains the same */
 
 .cursor-hover {
   display: inline-block;
@@ -49,7 +74,6 @@
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='95' height='30'><rect width='100%' height='100%' fill='%23FAEC00' rx='15' ry='15'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' font-family='Fuzzy Bubbles, sans-serif' font-size='14' fill='%23B05E27' font-weight='bold'>PROJECTS</text></svg>") 47 15, auto;
 }
 
-
 .cursor-hover:hover::after {
   content: attr(data-cursor);
   position: fixed;
@@ -59,7 +83,7 @@
   color: #B05E27;
   padding: 4px 12px;
   border-radius: 15px;
-  font-family: 'Fuzzy Bubbles', sans-serif;
+  font-family: 'DynaPuff', system-ui;
   font-weight: bold;
   font-size: 14px;
   pointer-events: none;
@@ -83,7 +107,6 @@
     opacity: 0;
     transform: translate(-50%, -10px);
   }
-
   to {
     opacity: 1;
     transform: translate(-50%, 0);
@@ -94,11 +117,9 @@
   0% {
     transform: translate(-50%, 0);
   }
-
   50% {
     transform: translate(-50%, -6px);
   }
-
   100% {
     transform: translate(-50%, 0);
   }
@@ -128,16 +149,15 @@
   right: 300px;
 }
 
+/* Responsive design updates */
 @media (max-width: 1200px) {
-
   .title {
     font-size: 135px;
-    top: 25px;
     -webkit-text-stroke: 3.5px #B05E27;
   }
-
-  .title.from-duck {
-    left: 240px;
+  
+  .subtitle {
+    font-size: 22px;
   }
 
   .frog {
@@ -158,15 +178,13 @@
 }
 
 @media (max-width: 1278px) {
-
   .title {
     font-size: 120px;
-    top: 20px;
     -webkit-text-stroke: 3px #B05E27;
   }
-
-  .title.from-duck {
-    left: 220px;
+  
+  .subtitle {
+    font-size: 20px;
   }
 
   .frog {
@@ -186,29 +204,13 @@
   }
 }
 
-@keyframes swanFloat {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(-10px, -4px);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
 @media (max-width: 1024px) {
-
   .title {
     font-size: 110px;
-    top: 40px;
   }
-
-  .title.from-duck {
-    left: 200px;
+  
+  .subtitle {
+    font-size: 18px;
   }
 
   .frog {
@@ -229,18 +231,19 @@
 }
 
 @media (max-width: 768px) {
-
+  .header-section {
+    top: 20px;
+  }
+  
   .title {
     font-size: 70px;
-    top: 30px;
-    left: 50% !important;
-    transform: translateX(-50%);
     -webkit-text-stroke: 2px #B05E27;
-    text-align: center;
   }
-
-  .title.from-duck {
-    left: 50% !important;
+  
+  .subtitle {
+    font-size: 16px;
+    margin-top: 5px;
+    padding: 0 20px;
   }
 
   .frog {
@@ -262,18 +265,25 @@
     bottom: 40px;
   }
   
-  /* Simpler cursor for mobile */
   .cursor-hover:hover {
     cursor: pointer;
   }
 }
 
 @media (max-width: 480px) {
-
+  .header-section {
+    top: 15px;
+  }
+  
   .title {
     font-size: 52px;
-    top: 20px;
     letter-spacing: 1px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    margin-top: 3px;
+    padding: 0 15px;
   }
 
   .frog {
